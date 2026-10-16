@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Anton', sans-serif;
+  background: rgb(255, 255, 255);
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Lato-Black;    
+}
+
+/* Global */
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    /* margin-top: -10px; */
+}
+
+
+@font-face {
+  font-family: Lato-Black;
+  src:url(Lato-Black.ttf);
+}
+
+
+/* =======================Header======================= */
+
+
+header {
+    max-width: 2000px;
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a,
+nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+.logo a {
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav a {
+    font-size: 14px;
+    color: rgb(155, 155, 155);
+}
+
+nav a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+/* Hide dropdown menus by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/* Navigation list */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+/* Each navigation item */
+nav ul li {
+    position: relative;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+
+    background-color: #ffffff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Stack dropdown links vertically */
+nav ul .dropdown-menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover > .dropdown-menu {
+    display: flex;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 18px;
+    color: #000000;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Hover effect */
+.dropdown-menu li a:hover {
+    background-color: #e5e5e5;
+}
+
+
+
+
+
+
+/* ===================HERO======================== */
+
+
+/* Hero section */
+.hero {
+    position: relative;
+    width: 90%;
+    max-width: 2000px;
+    /* height: calc(100vh - 80px); */
+    height: 85vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Background video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* ========================== Footer ========================== */
+
+.hero-footer {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    z-index: 10;
+
+    background: transparent;
+    color: white;
+    text-align: center;
+}
+
+/* Thin line and arrow */
+.footer-trigger {
+    height: 45px;
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    cursor: pointer;
+    font-size: 12px;
+    letter-spacing: 2px;
+    background: transparent;
+}
+
+.footer-trigger span {
+    background: transparent;
+}
+
+.arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    background: transparent;
+}
+
+/* Hidden footer content */
+.footer-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    opacity: 0;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    transition:
+        max-height 0.5s ease,
+        opacity 0.4s ease,
+        padding 0.5s ease;
+}
+
+/* Expand over the hero on hover */
+.hero-footer:hover .footer-content {
+    max-height: 300px;
+    padding: 35px 20px;
+    opacity: 1;
+}
+
+.hero-footer:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.footer-content h2,
+.footer-content p,
+.footer-content nav {
+    background: transparent;
+}
+
+.footer-content nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    background: transparent;
+}
+
+.footer-content a:hover {
+    opacity: 0.6;
+}
+
+.copyright {
+    font-size: 11px;
+    color: #ccc;
+}
